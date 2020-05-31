@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(MyCollectionViewCell.nib(), forCellWithReuseIdentifier: "MyCollectionViewCell")
+        collectionView.register(MyCollectionViewCell.nib(), forCellWithReuseIdentifier: K.identifier)
         configureLayout()
         
     }
@@ -49,12 +49,11 @@ class ViewController: UIViewController {
 extension ViewController: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(countries.count)
       return countries.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCollectionViewCell", for: indexPath) as! MyCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: K.identifier, for: indexPath) as! MyCollectionViewCell
         cell.configure(name: countries[indexPath.row].name, color: UIColor.red, population: countries[indexPath.row].population, flag: #imageLiteral(resourceName: "mcd"))
         cell.layer.cornerRadius = 10
         return cell
