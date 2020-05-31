@@ -18,25 +18,25 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="41L-AO-cvs">
-                        <rect key="frame" x="-2.5" y="168" width="120" height="181"/>
+                        <rect key="frame" x="-2.5" y="168" width="58.5" height="120.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCB-36-got">
-                                <rect key="frame" x="39" y="0.0" width="42" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="0.0" y="0.0" width="58.5" height="30"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOZ-Ye-FuE">
-                                <rect key="frame" x="39" y="30.5" width="42" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="9.5" y="40" width="40" height="20.5"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="THQ-gs-uHh">
-                                <rect key="frame" x="0.0" y="61" width="120" height="120"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="THQ-gs-uHh">
+                                <rect key="frame" x="4.5" y="70.5" width="50" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="9Ug-79-yf5"/>
-                                    <constraint firstAttribute="height" constant="120" id="sZo-bi-sqz"/>
+                                    <constraint firstAttribute="height" constant="50" identifier="imageHeight" id="XnV-PF-r4L"/>
+                                    <constraint firstAttribute="width" constant="50" identifier="imageWidth" id="vjn-zn-WkB"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -56,7 +56,7 @@
     </objects>
     <resources>
         <namedColor name="CellBackgroundColor">
-            <color red="0.62000000476837158" green="0.62000000476837158" blue="0.62000000476837158" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.5" green="0.62000000479999995" blue="0.62000000479999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

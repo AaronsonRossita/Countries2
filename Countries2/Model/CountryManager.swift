@@ -49,4 +49,29 @@ class CountryManager {
             return nil
         }
     }
+    
+    
+
+    //MARK: @escaping
+
+//    func getCountriesDemo(calback : @escaping ([CountryData]) -> Void ){
+//        guard let url = URL(string: countryURL) else {return}
+//
+//        URLSession.shared.dataTask(with: url) {  (data, response, error) in
+//            if let err = error{
+//                print(err)
+//                return
+//            }
+//
+//            guard let data = data else {return}
+//
+//            if let countries = self.parseJSON(countryData: data){
+//                calback(countries)
+//            }
+//
+//        }.resume()
+//
+//    }
+//
+    
 }

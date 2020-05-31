@@ -18,14 +18,54 @@ class MyCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
     }
 
-    public func configure(name: String, color: UIColor, population: Int, flag: UIImage){
-        label.text = name
-        label2.backgroundColor = color
-        label2.text = String(population)
-        viewImage.image = flag
+    public func configure(name: String?, color: CGColor, population: Int?, flag: String?){
+        if let safeName = name{
+            label.text = safeName
+        }else{
+            label.text = ""
+        }
+        if let safePopulation = population{
+            label2.text = changeNumber(from: safePopulation)
+        }else{
+            label2.text = ""
+        }
+        label2.layer.cornerRadius = 10
+        label2.layer.backgroundColor = K.Color.populationColor(population: population!)
+        label2.layer.borderColor = K.Color.black
+        label2.layer.borderWidth = CGFloat(2.0)
+        loadImage(flag: flag)
     }
     
     static func nib() -> UINib{
         return UINib(nibName: K.identifier, bundle: nil)
     }
+    
+    func loadImage(flag image: String?){
+        if let imageUrl = image{
+            if let url = URL(string: imageUrl){
+                DispatchQueue.global().async {
+                    if let data = try? Data(contentsOf: url){
+                        DispatchQueue.main.async {
+                            self.viewImage.image = UIImage(data: data)
+                            for cons in self.viewImage.constraints{
+                                if cons.identifier == K.Image.height{
+                                    cons.constant = K.cellWidth * 0.75
+                                }else if cons.identifier == K.Image.width{
+                                    cons.constant = K.cellWidth
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    func changeNumber(from this: Int) -> String{
+        let formater = NumberFormatter()
+        formater.numberStyle = .decimal
+        let string = formater.string(from: NSNumber(value: this))
+        return "  \(string!)  "
+    }
+    
 }

@@ -81,7 +81,6 @@
 			isa = PBXGroup;
 			children = (
 				6BE8A04D2483D28400BF775F /* Assets.xcassets */,
-				6BE8A05C2483F0EF00BF775F /* Constants.swift */,
 				6BE8A05E2484050E00BF775F /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
@@ -110,6 +109,7 @@
 			children = (
 				6BE8A0642484088D00BF775F /* CountryManager.swift */,
 				6BE8A0662484089500BF775F /* CountryData.swift */,
+				6BE8A05C2483F0EF00BF775F /* Constants.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

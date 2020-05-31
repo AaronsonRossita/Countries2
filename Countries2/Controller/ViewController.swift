@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     let countryManager = CountryManager()
     private var layout: UICollectionViewFlowLayout!
     var countries = [CountryData](){
-        didSet{
+        willSet{
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
             }
@@ -25,14 +25,13 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        countryManager.delegate = self
         countryManager.getCountries()
         
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(MyCollectionViewCell.nib(), forCellWithReuseIdentifier: K.identifier)
-        configureLayout()
-        
+        configureLayout() 
     }
 
 
@@ -56,7 +55,7 @@ extension ViewController: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: K.identifier, for: indexPath) as! MyCollectionViewCell
-        cell.configure(name: countries[indexPath.row].name, color: UIColor.red, population: countries[indexPath.row].population, flag: #imageLiteral(resourceName: "mcd"))
+        cell.configure(name: countries[indexPath.row].name, color: CGColor(srgbRed: 100, green: 100, blue: 100, alpha: 1), population: countries[indexPath.row].population, flag: countries[indexPath.row].flagImage)
         cell.layer.cornerRadius = 10
         return cell
     }
