@@ -46,6 +46,8 @@ class ViewController: UIViewController {
     }
 }
 
+//MARK: - CollectionView
+
 extension ViewController: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -69,6 +71,7 @@ extension ViewController: UICollectionViewDelegate{
     
 }
 
+//MARK: - CountryManager
 
 extension ViewController: CountryManagerDelegate{
     
