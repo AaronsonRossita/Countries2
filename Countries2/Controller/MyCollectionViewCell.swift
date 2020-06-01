@@ -18,14 +18,14 @@ class MyCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
     }
 
-    public func configure(name: String?, color: CGColor, population: Int?, flag: String?){
+    public func configure(name: String?, population: Int?, flag: String?){
         if let safeName = name{
             label.text = safeName
         }else{
             label.text = ""
         }
         if let safePopulation = population{
-            label2.text = changeNumber(from: safePopulation)
+            label2.text = K.changeNumber(from: safePopulation)
         }else{
             label2.text = ""
         }
@@ -60,12 +60,4 @@ class MyCollectionViewCell: UICollectionViewCell {
             }
         }
     }
-    
-    func changeNumber(from this: Int) -> String{
-        let formater = NumberFormatter()
-        formater.numberStyle = .decimal
-        let string = formater.string(from: NSNumber(value: this))
-        return "  \(string!)  "
-    }
-    
 }

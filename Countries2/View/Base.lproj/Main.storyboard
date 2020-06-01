@@ -39,11 +39,87 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="vKq-Li-Xi4" id="98y-mO-LeY"/>
+                        <segue destination="Mur-Ev-4Dw" kind="show" identifier="segue" id="QvT-p5-WOb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="Xb7-j1-Zuw">
+            <objects>
+                <viewController id="Mur-Ev-4Dw" customClass="SecondViewController" customModule="Countries2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ssf-p5-mwm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="d9A-bX-PKu">
+                                <rect key="frame" x="20" y="20" width="374" height="768"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQx-iw-Xv8">
+                                        <rect key="frame" x="148.5" y="0.0" width="77" height="34"/>
+                                        <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xgh-01-MpR">
+                                        <rect key="frame" x="67" y="54" width="240" height="580.5"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mXI-7x-zoa">
+                                        <rect key="frame" x="166" y="654.5" width="42" height="113.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUz-Mh-9So">
+                                                <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZ5-os-SBt">
+                                                <rect key="frame" x="0.0" y="31" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTa-De-GqL">
+                                                <rect key="frame" x="0.0" y="62" width="42" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zwp-Z9-Bd5">
+                                                <rect key="frame" x="0.0" y="92.5" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9BN-Pe-GeA" firstAttribute="bottom" secondItem="d9A-bX-PKu" secondAttribute="bottom" constant="20" id="FBS-oY-BgB"/>
+                            <constraint firstItem="9BN-Pe-GeA" firstAttribute="trailing" secondItem="d9A-bX-PKu" secondAttribute="trailing" constant="20" id="K4z-pC-vd6"/>
+                            <constraint firstItem="d9A-bX-PKu" firstAttribute="top" secondItem="9BN-Pe-GeA" secondAttribute="top" constant="20" id="gLW-gY-yoj"/>
+                            <constraint firstItem="d9A-bX-PKu" firstAttribute="leading" secondItem="9BN-Pe-GeA" secondAttribute="leading" constant="20" id="pPd-CP-GRf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9BN-Pe-GeA"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XgX-YX-o7o"/>
+                    <connections>
+                        <outlet property="capitalCity" destination="ZUz-Mh-9So" id="qKD-8O-dbe"/>
+                        <outlet property="currency" destination="vTa-De-GqL" id="CMM-DS-YWi"/>
+                        <outlet property="imageView" destination="Xgh-01-MpR" id="rtq-hC-f0D"/>
+                        <outlet property="name" destination="NQx-iw-Xv8" id="wXK-nx-I9Y"/>
+                        <outlet property="officialLanguages" destination="pZ5-os-SBt" id="Ji6-OQ-BRe"/>
+                        <outlet property="population" destination="Zwp-Z9-Bd5" id="XAS-8P-sgM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kZU-xc-iB5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1037.68115942029" y="137.94642857142856"/>
         </scene>
     </scenes>
     <resources>

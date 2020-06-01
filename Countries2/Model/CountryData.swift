@@ -10,11 +10,11 @@ import Foundation
 
 struct CountryData: Decodable {
     
-    let name: String
-    let officialLanguages: [String]
-    let population: Int
-    let currency: String
-    let capitalCity: String
-    let flagImage: String
+    let name: String?
+    let officialLanguages: [String]?
+    let population: Int?
+    let currency: String?
+    let capitalCity: String?
+    let flagImage: String?
     
 }
